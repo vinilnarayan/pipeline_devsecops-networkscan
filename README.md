@@ -3,10 +3,13 @@
 # DevSecOps creation for network scan
 
 
+
 #### Requirement
 ```
 * This pipeline runs only in Linux environment (eg. MacOS, Kali Linux etc...).
 * NMAP should be installed.
+* Httpx should be installed.
+* Nikto should be installed.
 ```
 
 #### Downloads
