@@ -6,12 +6,12 @@
 
 #### Requirement
 ```
-* This pipeline runs only in Linux environment (eg. MacOS, Kali Linux etc...)
-* Preinstall the below items...
-    * Python3
-    * NMAP
-    * Httpx
-    * Nikto
+☞ This pipeline runs only in Linux environment (eg. MacOS, Kali Linux etc...)
+☞ Preinstall the below items...
+    ☛ Python3
+    ☛ NMAP
+    ☛ Httpx
+    ☛ Nikto
 ```
 
 #### Downloads
@@ -41,14 +41,14 @@
 
 ### Road Map
 
- * Popular Tools support.
+ ➤ Popular Tools support.
     - [x] Nmap
     - [x] Httpx
     - [x] Nikto
     - [ ] Dirsearch
     - [ ] EyeWitness
     - [ ] Nuclei
-* Reporting
+➤ Reporting
     - [x] TEXT
     - [x] HTML
     - [ ] JSON
