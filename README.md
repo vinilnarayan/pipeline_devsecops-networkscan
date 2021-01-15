@@ -26,9 +26,9 @@
 
 3. Scroll down to 'Pipeline' section and choose 'Pipeline script from SCM' in 'Definition'.
 
-4. Choose 'git' from 'SCM' and give 'Repository URL' as `https://github.com/vinilnarayan/jenkins-pipeline.git`.
+4. Choose 'git' from 'SCM' and give 'Repository URL' as `https://github.com/vinilnarayan/pipeline_devsecops-networkscan.git`.
 
-5. Then give `*/20210114` in 'Branch Specifier'
+5. Then give `*/main` in 'Branch Specifier'
 
 6. Click Apply and Save button and watch your first Pipeline run!
 
