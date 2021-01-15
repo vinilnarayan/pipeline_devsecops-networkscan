@@ -16,7 +16,7 @@
 
 #### Downloads
 
-➤ [Python](https://www.python.org/)
+➤ [Python](https://www.python.org/)\n
 ➤ [NMAP](https://nmap.org/) 
 ➤ [Httpx](https://github.com/projectdiscovery/httpx)
 ➤ [Nikto](https://github.com/sullo/nikto)
