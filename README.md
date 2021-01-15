@@ -1,9 +1,6 @@
 ###### pipeline_devsecops-networkscan
 
-# git-jenkins-pipeline
-
 # DevSecOps creation for network scan
-
 
 
 #### Requirement
