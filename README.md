@@ -16,13 +16,13 @@
 
 #### Downloads
 
-1. [Python](https://www.python.org/)
-1. [NMAP](https://nmap.org/) 
-2. [Httpx](https://github.com/projectdiscovery/httpx)
-3. [Nikto](https://github.com/sullo/nikto)
-4. [Dirsearch](https://github.com/maurosoria/dirsearch)
-5. [EyeWitness](https://github.com/FortyNorthSecurity/EyeWitness)
-6. [Nuclei](https://github.com/projectdiscovery/nuclei)
+➤ [Python](https://www.python.org/)
+➤ [NMAP](https://nmap.org/) 
+➤ [Httpx](https://github.com/projectdiscovery/httpx)
+➤ [Nikto](https://github.com/sullo/nikto)
+➤ [Dirsearch](https://github.com/maurosoria/dirsearch)
+➤ [EyeWitness](https://github.com/FortyNorthSecurity/EyeWitness)
+➤ [Nuclei](https://github.com/projectdiscovery/nuclei)
 
 ## Jenkins Pipeline Setup
 
@@ -41,14 +41,14 @@
 
 ### Road Map
 
- ➤ Popular Tools support.
+ * Popular Tools support.
     - [x] Nmap
     - [x] Httpx
     - [x] Nikto
     - [ ] Dirsearch
     - [ ] EyeWitness
     - [ ] Nuclei
-➤ Reporting
+* Reporting
     - [x] TEXT
     - [x] HTML
     - [ ] JSON
