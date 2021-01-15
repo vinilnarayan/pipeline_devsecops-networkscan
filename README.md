@@ -6,8 +6,8 @@
 
 #### Requirement
 ```
-☞ This pipeline runs only in Linux environment (eg. MacOS, Kali Linux etc...)
-☞ Preinstall the below items...
+➤ This pipeline runs only in Linux environment (eg. MacOS, Kali Linux etc...).
+➤ Preinstall the below items...
     ☛ Python3
     ☛ NMAP
     ☛ Httpx
@@ -16,13 +16,13 @@
 
 #### Downloads
 
-➤ [Python](https://www.python.org/)\n
-➤ [NMAP](https://nmap.org/) 
-➤ [Httpx](https://github.com/projectdiscovery/httpx)
-➤ [Nikto](https://github.com/sullo/nikto)
-➤ [Dirsearch](https://github.com/maurosoria/dirsearch)
-➤ [EyeWitness](https://github.com/FortyNorthSecurity/EyeWitness)
-➤ [Nuclei](https://github.com/projectdiscovery/nuclei)
+1. [Python](https://www.python.org/)
+2. [NMAP](https://nmap.org/) 
+3. [Httpx](https://github.com/projectdiscovery/httpx)
+4. [Nikto](https://github.com/sullo/nikto)
+5. [Dirsearch](https://github.com/maurosoria/dirsearch)
+6. [EyeWitness](https://github.com/FortyNorthSecurity/EyeWitness)
+7. [Nuclei](https://github.com/projectdiscovery/nuclei)
 
 ## Jenkins Pipeline Setup
 
