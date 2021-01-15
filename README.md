@@ -37,12 +37,12 @@
 
  * Popular Tools support.
     - [x] Nmap
-    - [ ] Httpx
-    - [ ] Nikto
+    - [x] Httpx
+    - [x] Nikto
     - [ ] Dirsearch
     - [ ] EyeWitness
     - [ ] Nuclei
 * Reporting
     - [x] TEXT
-    - [ ] HTML
+    - [x] HTML
     - [ ] JSON
