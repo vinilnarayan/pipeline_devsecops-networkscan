@@ -6,7 +6,8 @@
 
 #### Requirement
 ```
-* This pipeline runs only in Linux environment (eg. MacOS, Kali Linux etc...).
+* This pipeline runs only in Linux environment (eg. MacOS, Kali Linux etc...)
+* Python should be installed.
 * NMAP should be installed.
 * Httpx should be installed.
 * Nikto should be installed.
@@ -14,6 +15,7 @@
 
 #### Downloads
 
+1. [Python](https://www.python.org/)
 1. [NMAP](https://nmap.org/) 
 2. [Httpx](https://github.com/projectdiscovery/httpx)
 3. [Nikto](https://github.com/sullo/nikto)
