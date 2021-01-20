@@ -38,7 +38,7 @@ pipeline {
             def PROJECT_ID = readFile "${JENKINS_HOME}/PROJECT_ID.txt"
             def resulturl = "${params.ARCHERY_HOST}/proj_data/?project_id=${PROJECT_ID}"
             office365ConnectorSend webhookUrl: 'https://ibsoftware12.webhook.office.com/webhookb2/a697780d-8b74-48c9-b566-f1a113048edb@4fb49922-20aa-49cd-b53a-e7eedbd903b0/JenkinsCI/b1b550a29c3c4b28a3f3ab2c799c520c/b6b23246-1666-4c0e-9f9a-94036cfe6d9e',
-            message: "<pre><font color='green'><b>ArcherySec :</b></font><br>ZAP Scan has been initiated with <b>${TARGET_URL}</b>.<br>Test report will be available in<br><font color='DodgerBlue'>${resulturl}</font></pre>",
+            message: "<pre><font color='green'><b>ArcherySec :</b></font><br>ZAP Scan has been initiated with <b>${TARGET_URL}</b><br>Test report will be available in<br><font color='DodgerBlue'>${resulturl}</font></pre>",
             status: 'Success'
             sh "rm ${JENKINS_HOME}/PROJECT_ID.txt"
           }
