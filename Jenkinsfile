@@ -36,6 +36,11 @@ pipeline {
     post {
         always {
           echo 'ProjectID ${PROJECT_ID}'
+          script {
+            echo "host : ${params.ARCHERY_HOST}"
+            echo "ProjectID : ${params.PROJECT_ID}"
+            echo "ProjectID : ${env.PROJECT_ID}"
+          }
           /*
             office365ConnectorSend webhookUrl: 'https://ibsoftware12.webhook.office.com/webhookb2/a697780d-8b74-48c9-b566-f1a113048edb@4fb49922-20aa-49cd-b53a-e7eedbd903b0/JenkinsCI/b1b550a29c3c4b28a3f3ab2c799c520c/b6b23246-1666-4c0e-9f9a-94036cfe6d9e',
             message: 'Result has been available in $params.ARCHERY_HOST/proj_data/?project_id=$params.SCAN_ID',
