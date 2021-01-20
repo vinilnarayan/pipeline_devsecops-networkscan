@@ -54,8 +54,10 @@ pipeline {
                 }
               
               sh """
-	      					export URL=`${TARGET_URL} |sed 's/https\?:\/\///'`
-    						    nmap --open $URL -oG NMAP_Result.txt
+	      					echo "TARGET_URL......" $TARGET_URL
+						export URL=`${TARGET_URL} | sed 's/https\?:\/\///'`
+						echo "URL......" $URL
+    						nmap --open $URL -oG NMAP_Result.txt
     					    """
             }
           }
