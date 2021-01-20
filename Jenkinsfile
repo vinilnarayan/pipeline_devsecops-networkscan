@@ -28,6 +28,9 @@ pipeline {
                         exit 100
                     fi
                   '''
+                environment {
+                  PROJECT_ID_VIN = ${PROJECT_ID}
+                }
               }
             }
           }
@@ -39,8 +42,6 @@ pipeline {
           echo 'ProjectID ${PROJECT_ID}'
           script {
             echo "host : ${params.ARCHERY_HOST}"
-            echo sh(script: 'env|sort', returnStdout: true)
-            echo "ProjectID : ${params.PROJECT_ID}"
             echo sh(script: 'env|sort', returnStdout: true)
           }
           /*
