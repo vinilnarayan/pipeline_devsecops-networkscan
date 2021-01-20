@@ -29,7 +29,7 @@ pipeline {
                     fi
                   '''
                 environment {
-                  PROJECT_ID_VIN = ${PROJECT_ID}
+                  PROJECT_ID_VIN = "${PROJECT_ID}"
                 }
               }
             }
