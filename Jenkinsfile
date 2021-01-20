@@ -54,7 +54,8 @@ pipeline {
                 }
               
               sh """
-    						    nmap --open $TARGET_URL -oG NMAP_Result.txt
+	      					export URL=`${TARGET_URL} |sed 's/https\?:\/\///'`
+    						    nmap --open $URL -oG NMAP_Result.txt
     					    """
             }
           }
@@ -105,55 +106,8 @@ pipeline {
         }
       }
     }
-    stage('Httpx') {
-      steps {
-
-        script {
-
-          if (isUnix()) {
-            dir("outPut") {
-                if (fileExists('httpx_Output.txt')) {
-                    sh 'rm httpx_Output.txt'
-                }
-              
-              sh """
-    						    httpx -l NmapOut.txt -silent -o httpx_Output.txt
-    					    """
-            }
-          }
-          else {
-            echo "Windows cmd"
-          }
-        }
-      }
-    }
-    stage('Nikto') {
-      steps {
-
-        script {
-
-          if (isUnix()) {
-            dir("outPut") {
-                if (fileExists('nikto_scan_result.html')) {
-                    sh 'rm nikto_scan_result.html'
-                }
-              
-              def myWorkDir = pwd()
-              def file1 = new File(myWorkDir + "/httpx_Output.txt")
-              def lines = file1.readLines()
-              lines.each { String line ->
-                echo "${line}"
-                sh """
-    						    nikto -o nikto_scan_result.html -Format html -h ${line}
-    					    """
-              }
-            }
-          }
-          else {
-            echo "Windows cmd"
-          }
-        }
-      }
+    
+    
     }
   }
 }
