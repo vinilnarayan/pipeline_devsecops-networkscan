@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+#CONTAINER_ID=$(docker run -u zap -p 2376:2376 -d owasp/zap2docker-stable zap.sh -daemon -port 2376 -host 127.0.0.1 -config api.disablekey=true -config scanner.attackOnStart=true -config view.mode=attack -config connection.dnsTtlSuccessfulQueries=-1 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true)
+CONTAINER_ID=$(docker run -u zap -p 2377:2377 -d owasp/zap2docker-weekly zap.sh -daemon -port 2377 -host 127.0.0.1 -config api.disablekey=true -config scanner.attackOnStart=true -config view.mode=attack -config connection.dnsTtlSuccessfulQueries=-1 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true)
+printf "CONTAINER ID : $CONTAINER_ID"
+printf "\n"
+# the target URL for ZAP to scan
+TARGET_URL='http://demo.testfire.net'
+
+docker exec $CONTAINER_ID zap-cli -p 2377 status -t 120 && docker exec $CONTAINER_ID zap-cli -p 2377 open-url $TARGET_URL
+
+docker exec $CONTAINER_ID zap-cli -p 2377 spider $TARGET_URL
+
+docker exec $CONTAINER_ID zap-cli -p 2377 active-scan -r $TARGET_URL && docker exec $CONTAINER_ID zap-cli -p 2377 report -o /Users/vinilnarayan/.jenkins/ZAP_Report.html -f html
+
+docker exec $CONTAINER_ID zap-cli -p 2377 alerts
+
+# docker logs [container ID or name]
+divider==================================================================
+printf "\n"
+printf "$divider"
+printf "ZAP-daemon log output follows"
+printf "$divider"
+printf "\n"
+
+docker logs $CONTAINER_ID
+
+docker stop $CONTAINER_ID
+
+cat ${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log >> /Users/vinilnarayan/.jenkins/log.txt
